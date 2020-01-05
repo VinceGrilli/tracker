@@ -1,4 +1,5 @@
 import React from 'react';
+import { withApollo } from '../lib/apollo';
 import Layout from '../components/Layout';
 
 const Home = () => (
@@ -77,4 +78,4 @@ const Home = () => (
   </Layout>
 );
 
-export default Home;
+export default withApollo(Home);
