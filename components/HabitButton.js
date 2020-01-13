@@ -1,4 +1,4 @@
-import react, { useState } from 'react';
+import React, { useState } from 'react';
 
 const HabitButton = ({ date }) => {
   const [complete, setComplete] = useState(false);
@@ -8,6 +8,21 @@ const HabitButton = ({ date }) => {
       <button onClick={() => setComplete(!complete)}>
         {complete ? 'X' : 'O'}
       </button>
+      <style jsx>
+        {`
+          span {
+            display: flex;
+            flex-direction: column;
+          }
+          span + span {
+            margin-left: 10px;
+          }
+          button {
+            margin-top: 1rem;
+            border: none;
+          }
+        `}
+      </style>
     </span>
   );
 };

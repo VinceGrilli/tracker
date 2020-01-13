@@ -22,9 +22,10 @@ const Home = () => {
     <Layout>
       <div className='hero'>
         <h1 className='title'>Habit Tracker</h1>
-        <div className='list'></div>
-        <HabitForm setHabits={setHabits} />
-        <HabitList habits={habits} />
+        <div className='list'>
+          <HabitForm setHabits={setHabits} />
+          <HabitList habits={habits} />
+        </div>
       </div>
 
       <style jsx>{`
